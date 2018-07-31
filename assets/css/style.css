@@ -1,0 +1,43 @@
+
+body {
+	font-size: 20px;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+	text-align: center;
+}
+
+.container {
+	max-width: 960px;
+}
+
+#header {
+	max-width: 100%;
+	height: 640px;
+	margin:auto;
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	font-weight: bold;
+	background-color: #3EECAC;
+	background-image: -webkit-linear-gradient(199deg, #3EECAC 0%, #EE74E1 100%);
+	background-image: -o-linear-gradient(199deg, #3EECAC 0%, #EE74E1 100%);
+	background-image: linear-gradient(289deg, #3EECAC 0%, #EE74E1 100%);
+
+}
+
+#header h1 {
+	font-size: 4em;
+	padding: 200px 0 50px 0;
+}
+
+#mapa {
+	padding: 70px 0;
+}
+
+#mapa h2 {
+	font-size: 2em;
+	
+}
+
+.mapa {
+	border-radius: 6px;
+}
