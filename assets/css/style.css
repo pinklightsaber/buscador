@@ -43,3 +43,13 @@ body {
 	height: 500px;
 	width: 800px;
 }
+
+ul {
+	font-size: 2em;
+	font-weight: 600;
+}
+
+li {
+	font-size: 1em;
+	font-weight: 300;
+}
