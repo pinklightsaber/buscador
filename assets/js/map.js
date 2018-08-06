@@ -46,6 +46,7 @@ $( "#places" ).change(function() {
   console.log(type);
   initMap();
   callback();
+  
 });
 
 $( "#radio" ).change(function() {
@@ -87,6 +88,11 @@ $( "#radio" ).change(function() {
       //  $('#link').append(html);
     // });
 // function ranked(obj) {
+//   lugar.findIndex(x => x.rating === 'undefined');
+//   if (rank.checked == true){
+       
+//         var results = results.filter(ranked);
+//   } 
 //   if ('rating' in obj  === 'undefined') {
 //     return true;
 //   } else {
@@ -99,24 +105,32 @@ $( "#radio" ).change(function() {
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-  //      if (rank.checked == true){
-  //       ranked();
-  //       var results = results.filter(ranked);
+      
+  //      if(this.rating === undefined){
+  //       console.log(results.rating)
+  //       if (rank.checked == true){
+  //           // results.splice(i , 1);
+            
+  //       }
+
   // } 
+       
 
       createMarker(results[i]);
 
-         lugar.push({
-          nombre: results[i].name,
-          open: results[i].opening_hours,
-          rating: results[i].rating,
-          address: results[i].vicinity,
-          image: results[i].photos,
-          price: results[i].price_level  });      
+         // lugar.push({
+         //  nombre: results[i].name,
+         //  open: results[i].opening_hours,
+         //  rating: results[i].rating,
+         //  address: results[i].vicinity,
+         //  image: results[i].photos,
+         //  price: results[i].price_level  });      
       
     }
+    console.log(results)
        
-      console.log(lugar);
+      // console.log(lugar);
+// 
   }
 };
 
@@ -138,12 +152,27 @@ function createMarker(place) {
 
     var nombre = document.getElementById('name');
     var address = document.getElementById('address');
-       
+    var photo = document.getElementById('photo');
+    var rating = document.getElementById('rating');
+
+
+    
+   
     google.maps.event.addListener(marker, 'click', function() {
      
       nombre.textContent = place.name;
       address.textContent = place.vicinity;
 
+      if(place.opening_hours.open_now = true){
+        $('#open_close').text('Abierto');
+      }else{
+        $('#open_close').text('Cerrado');
+      }
+      // open_close.textContent = place.opening_hours;
+      // rating.textContent = place.rating;
+      photo.src = place.photos[0].getUrl({'maxWidth': 400, 'maxHeight': 400}); 
+      
+      
     });
 
 };
