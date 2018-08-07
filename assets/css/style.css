@@ -53,3 +53,9 @@ li {
 	font-size: 1em;
 	font-weight: 300;
 }
+
+#img-container {
+	max-width: 500px;
+	max-height: 500px;
+}
+
