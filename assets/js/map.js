@@ -40,17 +40,16 @@ $('img.tipo').on('click', function(){
   console.log(this.id);
   initMap();
   callback();
+  if(type== 'cafe') {
+    $('#header').css({'background-color': '#d3b28f'});
+  }else if (type=='shopping_mall'){ 
+     $('#header').css({'background-color': '#c7b9c8'});
+  }else if(type=='supermarket') {
+    $('#header').css({'background-color': '#9eb191'});
+  }
  
 });
 
-// $( "#places" ).change(function() {
-//     var e = document.getElementById("places");
-//     type = e.options[e.selectedIndex].text;
-//   console.log(type);
-//   initMap();
-//   callback();
-  
-// });
 
 $( "#radio" ).change(function() {
     var e = document.getElementById("radio");
@@ -157,4 +156,3 @@ function createMarker(place) {
 
 };
 
-      
