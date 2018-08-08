@@ -35,15 +35,22 @@ function initMap () {
 
 
 
-
-$( "#places" ).change(function() {
-    var e = document.getElementById("places");
-    type = e.options[e.selectedIndex].text;
-  console.log(type);
+$('img.tipo').on('click', function(){
+  type = this.id;
+  console.log(this.id);
   initMap();
   callback();
-  
+ 
 });
+
+// $( "#places" ).change(function() {
+//     var e = document.getElementById("places");
+//     type = e.options[e.selectedIndex].text;
+//   console.log(type);
+//   initMap();
+//   callback();
+  
+// });
 
 $( "#radio" ).change(function() {
     var e = document.getElementById("radio");
@@ -120,7 +127,7 @@ function crearDatos (){
         var list = $('#img-container').append('<ul class="slides"></ul>').find('ul');
                 
         for (var i=0;i<photos.length;i++){
-            list.append('<li> <img src = ' + photos[i].getUrl({'maxWidth':500, 'maxHeight': 500})+ '> </li>');
+            list.append('<li> <img src = ' + photos[i].getUrl({'maxWidth':400, 'maxHeight': 400})+ '> </li>');
         }  
         
       }

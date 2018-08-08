@@ -9,6 +9,7 @@ body {
 	max-width: 960px;
 	box-sizing: border-box;
 	padding: 0;
+	text-align: center;
 }
 
 #header {
@@ -37,6 +38,7 @@ body {
 	padding: 100px 0 50px 0;
 }
 
+
 #mapa {
 	padding: 70px 0;
 }
@@ -45,6 +47,24 @@ body {
 	font-size: 2em;
 	
 }
+#mapa ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+.tipo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+
+}
+
+.tipo:hover {
+	box-shadow: 0 14px 24px rgba(50,48,58,.25);
+}
+
 
 #map {
 	border-radius: 6px;
@@ -64,8 +84,11 @@ li {
 
 #img-container {
 	max-width: 400px;
-	max-height: 500px;
+	max-height: 400px;
+
 }
+
+
 
 .row {
 	
@@ -84,7 +107,7 @@ li {
 	max-width: 450px;
 
 }
-.element:hover {
+.element:hover , {
 	height: 500px;	
 	border-radius: 6px;	
 	box-shadow: 0 14px 24px rgba(50,48,58,.25);
