@@ -1,14 +1,10 @@
 var map;
-// var infowindow;
 var lat = -33.417974 ;
 var lon = -70.606384;
-var lugar = [];
 var current;
 var type = 'cafe';
 var radio = 2000;
-
-
-
+var request;
 
  if(navigator.geolocation) { 
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -57,141 +53,50 @@ $( "#radio" ).change(function() {
   callback();
 });
 
-//  if (checkBox.checked == true){
-//     text.style.display = "block";
-//   } else {
-//     text.style.display = "none";
-//   }
-// document.getElementById("checkbox").checked = true;
-// document.getElementById("checkbox").checked = false;
-  
-
-  // var api = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=';
-  // var key = 'AIzaSyD5Tsudko0x4s4krnsetBUwFF6oyzWg_7w';
-  // var cors = 'https://cors-anywhere.herokuapp.com/';
-
-  // var link = cors + api + lat + ',' + lon + '&radius=' + 5000 + '&type=cafe&key='+ key;
-  //  $.ajax({
-  //     url: link,
-  //     method: 'GET'
-  //   }).done(function(data){
-  //     console.log(data);
-      
-      // var html = ' ';
-      // $.each(data.results, function(i, item) {
-      //   html += '<ul>' + item.name;
-      //   $.each(item, function(j, item1){
-      //     html += '<li>' + item1 + '</li>';
-      //   });
-      //   html += '</ul>';
-      //   });
-      //  $('#link').append(html);
-    // });
-// function ranked(obj) {
-//   lugar.findIndex(x => x.rating === 'undefined');
-//   if (rank.checked == true){
-       
-//         var results = results.filter(ranked);
-//   } 
-//   if ('rating' in obj  === 'undefined') {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
 
 
 
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      
-  //      if(this.rating === undefined){
-  //       console.log(results.rating)
-  //       if (rank.checked == true){
-  //           // results.splice(i , 1);
-            
-  //       }
 
-  // } 
-       
 
-      createMarker(results[i]);
-
-         // lugar.push({
-         //  nombre: results[i].name,
-         //  open: results[i].opening_hours,
-         //  rating: results[i].rating,
-         //  address: results[i].vicinity,
-         //  image: results[i].photos,
-         //  price: results[i].price_level  });      
+      createMarker(results[i]);  
       
     }
     console.log(results)
-       
-      // console.log(lugar);
-// 
+
   }
 };
 
+function crearDatos (){
+ 
+  var serv = new google.maps.places.PlacesService(map); 
+    $('span').empty();
+    $('#img-container').empty();
 
-
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-
-  });
-
-
-        //listado de cafes
-    // var placesList = document.getElementById('places');
-    // var tr = document.createElement('tr');
-    // tr.textContent = place.name;
-    // placesList.appendChild(tr);
-
-    var nombre = document.getElementById('name');
-    var address = document.getElementById('address');
-    // var photo = document.getElementById('photo');
-    var price = document.getElementById('price');
-    var id = place.place_id;
-    var request = {
-      placeId : id
-    };
-
-     var serv = new google.maps.places.PlacesService(map); 
-
-    google.maps.event.addListener(marker, 'click', function() {
-        // $('p').empty();
-        $('span').empty();
-        $('#img-container').empty();
-
-        serv.getDetails(request, function(lugar){
+    serv.getDetails(request, function(lugar){
         console.log(lugar) //GREAAAAAAAAAT
-      
-     
-      nombre.textContent = lugar.name;
-      address.textContent = lugar.vicinity;
-
+ 
+       $('#name').text(lugar.name);
+       $('#address').text(lugar.vicinity);
 
       if(lugar.opening_hours !== undefined){
-         if(lugar.opening_hours.open_now = true){
-        $('#open_close').text('Abierto');
+        if(lugar.opening_hours.open_now = true){
+          $('#open_close').text('Abierto');
         }else if (lugar.opening_hours.open_now = false){
-        $('#open_close').text('Cerrado');
-      }else{
-        $('#open_close').text(' ');
-      }  }
-
-     
-      
+          $('#open_close').text('Cerrado');
+        }else{
+          $('#open_close').text(' ');
+        }  
+      };
+   
       if(lugar.rating>4.5){
-        $('#rating').text('Excelentes reseñas');
+          $('#rating').text('Excelentes reseñas');
       }else if (lugar.rating> 4){
-        $('#rating').text('Buenas reseñas');
+          $('#rating').text('Buenas reseñas');
       }else {
-        $('#rating').text('Reseñas moderadas');
+          $('#rating').text('Reseñas moderadas');
       }
 
       if(lugar.price_level=0){
@@ -205,11 +110,11 @@ function createMarker(place) {
       } else {
         $('#price').text('Un poco caro');
       }
-      $('#website').text(lugar.website);
+
+      $('#website').text(lugar.website); //HERE
       $('#fono').text(lugar.international_phone_number)
 
-      if(lugar.photos){ 
-         
+      if(lugar.photos){  //HERE
 
         var photos = lugar.photos;
         var list = $('#img-container').append('<ul class="slides"></ul>').find('ul');
@@ -217,11 +122,30 @@ function createMarker(place) {
         for (var i=0;i<photos.length;i++){
             list.append('<li> <img src = ' + photos[i].getUrl({'maxWidth':500, 'maxHeight': 500})+ '> </li>');
         }  
-        $('.flexslider').flexslider({
+        
+      }
+      $('.flexslider').flexslider({
              animation: "slide"
           });
-      }
     });
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location
+
+  });
+
+
+    google.maps.event.addListener(marker, 'click', function() {
+    var id = place.place_id;
+    request = {
+      placeId : id
+    };
+      
+      crearDatos();   
   });
 
 };
