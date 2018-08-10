@@ -101,21 +101,27 @@ function crearDatos (){
       $('#fono').text(lugar.international_phone_number)
 
       if(lugar.photos){  //HERE
+         var photos = lugar.photos;
+        var list = $('#img-container').append('<ul class="slides"></ul>').find('ul');
+                
+        for (var i=0;i<photos.length;i++){
+            list.append('<li> <img src = ' + photos[i].getUrl({'maxWidth':400, 'maxHeight': 400})+ '> </li>');
+} 
 
         // var photos = lugar.photos;
         //var list = $('#img-container').append('<ul class="slides"></ul>').find('ul');
 
-        var slider = $('#img-container');
-        var html = '<ul class="slides">';
+        // var slider = $('#img-container');
+        // var html = '<ul class="slides">';
 
-        lugar.photos.forEach(function(elem) {
+        // lugar.photos.forEach(function(elem) {
 
-          html += '<li><img src="'+ elem.getUrl() + '"></li>';
+        //   html += '<li><img src="'+ elem.getUrl() + '"></li>';
           
-        })
+        // })
 
-        html += '</ul>';
-        console.log(lugar.photos);
+        // html += '</ul>';
+        // console.log(lugar.photos);
 
         //slider.append(html + '</ul>');
 
