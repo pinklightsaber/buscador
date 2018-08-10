@@ -1,12 +1,11 @@
 var map;
-var lat = -33.417974 ;
-var lon = -70.606384;
 var current;
-var type = 'cafe';
+var type = $('img.tipo').attr("id");
 var radio = 2000;
 var request;
 
- if(navigator.geolocation) { 
+
+if(navigator.geolocation) { 
     navigator.geolocation.getCurrentPosition(function(pos) {
      
       lat = pos.coords.latitude;
@@ -14,7 +13,7 @@ var request;
       current = new google.maps.LatLng(lat, lon);
       initMap(current);
        });
-     };
+};
 
 function initMap () {
 
@@ -24,7 +23,6 @@ function initMap () {
   });
   
 
-  // infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);  
     service.nearbySearch({
       location: current,
@@ -32,23 +30,6 @@ function initMap () {
       type: [type]
     }, callback);
 };
-
-
-
-$('img.tipo').on('click', function(){
-  type = this.id;
-  console.log(this.id);
-  initMap();
-  callback();
-  if(type== 'cafe') {
-    $('#header').css({'background-color': '#d3b28f'});
-  }else if (type=='shopping_mall'){ 
-     $('#header').css({'background-color': '#c7b9c8'});
-  }else if(type=='supermarket') {
-    $('#header').css({'background-color': '#9eb191'});
-  }
- 
-});
 
 
 $( "#radio" ).change(function() {
@@ -60,13 +41,9 @@ $( "#radio" ).change(function() {
 });
 
 
-
-
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-
-
       createMarker(results[i]);  
       
     }

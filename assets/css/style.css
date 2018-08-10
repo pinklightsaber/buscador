@@ -10,6 +10,7 @@ body {
 	box-sizing: border-box;
 	padding: 0;
 	text-align: center;
+
 }
 
 .navbar	{
@@ -17,16 +18,81 @@ body {
 	z-index:20;
 	position: fixed;
 	width: 100vw;
+
 }
 
+
 .navbar:hover {
-	background-color: #3EECAC
+	background-color: #eee;
 }
-#header {
+
+#main-header {
+	max-width: 100%;
+	height: 650px;
+	background-position: center;
+	background: url(../img/original.jpg)
+
+}
+
+#lugares {
+	margin: 100px 0;
+}
+
+
+#img1 {
+	background-image: url(../img/565256_442792.jpg);
+}
+#img2 {
+	background-image: url(../img/ufncskjd3.jpg);
+}
+#img3 {
+	background-image: url(../img/owurghvdsou.jpg);
+}
+
+.img-all {
+
+	height: 200px;
+	margin: 10px;
+	color: #fff;
+	border-radius: 6px;
+	background-size: contain;
+
+}
+
+.img-all:hover {
+	 margin: 0;
+	 height: 220px;
+	 box-shadow: 0 14px 24px rgba(50,48,58,.25);
+
+}
+
+.img-all a {
+
+	margin: 0;
+	font-size: 1.2em;
+	position: relative;
+	top: 40%;
+	text-shadow: 0 1px 0 rgba(22,14,38,.85);
+	font-weight: 600;
+	color: #fff;
+}
+
+.img-all p {
+	display: none;
+	text-shadow: 0 1px 0 rgba(22,14,38,.85);
+}
+
+.img-all:hover p {
+	display: block;
+	position: relative;
+	top: 40%;
+
+}
+/*otras pages*/
+#header { 
 	max-width: 100%;
 	height: 300px;
 	margin:auto;
-	background-position: center;
 	background-size: cover;
 	color: #fff;
 	font-weight: bold;
@@ -75,6 +141,9 @@ body {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	position: absolute;
+	left: 100px;
+	top: 100px;
 
 }
 
@@ -89,7 +158,7 @@ body {
 	width: 800px;
 }
 
-ul {
+#mapa ul {
 	font-size: 2em;
 	font-weight: 600;
 }
