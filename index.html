@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Super página 3000</title>
+	<title>Busca cerca</title>
 
 
 	<!-- BS CSS-->
@@ -24,20 +24,23 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light">
-			<div class="collapse navbar-collapse" id="navbarNav">
+			<div class="collapse navbar-collapse " id="navbarNav">
 		    <ul class="navbar-nav">
+		      
 		      <li class="nav-item active">
 		        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="cafe.html">Cafe</a>
+		        <a class="nav-link" href="food.html">Food <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="shopping_mall.html">Mall</a>
+		        <a class="nav-link" href="ent.html">Ent <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="supermarket.html">Super</a>
+		        <a class="nav-link" href="shopping.html">Shop <span class="sr-only">(current)</span></a>
 		      </li>
+		      
+		     
 		    </ul>
   		</div>
 		</nav>
@@ -51,31 +54,81 @@
 			<h2>BÚSQUEDA DE LUGARES</h2>
 			<p>Buscar servicios o lugares cerca mediante la implementación de google maps.
 			Haz click en el lugar deseado para encontrar un espectro grande de servicios para disfrutar :)</p>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="img-all" id="img1">
-						<a href="cafe.html">CAFE</a>
-						<p>Revisa cafes cerca tuyo</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="img-all" id="img2">
-						<a href="cafe.html">SUPERMERCADOS</a>
-						<p>Revisa super cerca tuyo</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="img-all" id="img3">
-						<a href="cafe.html">SHOPPING</a>
-						<p>Revisa centros cerca tuyo</p>
-					</div>
-				</div>
+			
+	</section>
+
+	<section class="custom">
+	<div class="container">
+
+		<div class="imgs">
+
+			<div id="img1" class="custom-1"></div>
+			<div id="img2" class="custom-2"></div>
+			<div id="img3" class="custom-3"></div>
+		</div>
+		<div class="row justify-content-md-center">
+			<div class="col-md-8 "><p>Una búsqueda de lugares por servicios de entretención tales como <a href="#">de alimentación</a>,o de <a href="#">compras</a> o de otros tipos de <a href="#">entretenimiento</a> .</p></div>
+		</div>
+		</div>
+	</div>
+</section>
+
+<section class="services">
+	<div class="service">
+	<div class="container">
+		<div class="row serv">
+			<div class="col-md-7">
+				<div class="step-1" id="img4"></div>
+				<div class="step-2" id="img5"></div>
+			</div>
+			<div class="col-md-5">
+				<h3>Food</h3>
+				<p>Buscar lugares donde donde se sirven aperitivos y comidas, como un <a href="cafe.html">restaurant</a>, también platos combinados y no comida caliente propiamente dicha tales como un <a href="restaurant.html">café</a> o un establecimiento de bebidas alcoholicas tipo <a href="bar.html">bar</a></p>
+				
 			</div>
 		</div>
-	</section>
-		<footer>
-			
-		</footer>
+	</div>
+	</div>
+	<div class="container">
+		<div class="row serv">
+			<div class="col-md-5">
+				<h3>Shopping</h3>
+				<p>Buscar lugares donde adquirir víveres como un <a href="supermarket.html">supermercado</a>, o una variedad mayor como un <a href="shopping_mall.html">centro comercial</a>entre otro tipo de <a href="store.html">tiendas</a></p>
+				
+			</div>
+			<div class="col-md-5 offset-md-2">
+				
+				<div class="step-1" id="img6"></div>
+				<div class="step-2" id="img7"></div>
+			</div>
+		</div>
+	</div>
+	<div class="service">
+	<div class="container">
+		<div class="row serv">
+			<div class="col-md-7">
+				<div class="step-1" id="img8"></div>
+				<div class="step-2" id="img9"></div>
+			</div>
+			<div class="col-md-5">
+				<h3>Ent</h3>
+				<p>Buscar lugares de entretención tales como <a href="park.html">parques</a>,  <a href="night_club.html">nocturnos</a>, <a href="museum.html">museos</a>,  <a href="bar.html">etc</a></p>
+				
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+<footer>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+</footer>
 			
 			
 			
@@ -101,7 +154,7 @@
 
 	<!-- local script -->
 	<script src="assets/js/script.js"></script>	
-	<script src="assets/js/map.js"></script>
+
 
 </body>
 </html>

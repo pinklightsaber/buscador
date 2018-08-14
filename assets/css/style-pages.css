@@ -1,0 +1,270 @@
+body {
+	font-size: 20px;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+	text-align: center;
+}
+
+
+.navbar	{
+	background: 0 0;
+	z-index:20;
+	position: fixed;
+	width: 100vw;
+
+}
+
+
+.navbar:hover {
+	background-color: #eee;
+}
+
+#header { 
+	max-width: 100%;
+	height: 500px;
+	margin:auto;
+	background-size: cover;
+	color: #fff;
+	font-weight: bold;
+/*	background-color:#d3b28f;
+	background-image: radial-gradient(#fff 10%, transparent 10%),
+	radial-gradient(#fff 10%, transparent 10%);*/
+	/*background-size: 30px 30px;*/
+	background-position: 0 0, 15px 15px;padding: 10px;
+	opacity: 0.8;
+	width: 100%;
+	min-height: 50px;
+/*	-webkit-clip-path: ellipse(60% 100% at 50% 0%);
+	clip-path: ellipse(60% 100% at 50% 0%);*/
+
+}
+
+.header-food {
+	background-image: url(../img/HIGH9836_830613.jpg);
+}
+
+.header-ent {
+	background-image: url(../img/header_park.jpg)
+}
+
+.header-shop {
+	background-image: url(../img/shop.jpg)
+}
+#header h1 {
+	font-size: 4em;
+	padding: 100px 0 50px 0;
+}
+
+#content {
+	padding: 120px 0 60px 0;
+}
+
+.container {
+	border-bottom: 1px solid #e8eaed;
+	padding: 60px 0;
+	max-width:960px;
+	box-sizing: border-box;
+	
+}
+.col-md-4 {
+	padding: 0;
+}
+
+.img1 {
+	background-image: url(../img/565256_442792.jpg);
+}
+.img2 {
+	background-image: url(../img/rest.jpg);
+}
+.img3 {
+	background-image: url(../img/parque-Alameda-2.jpg);
+}
+
+.img4 {
+	background-image: url(../img/imageggs.jpg);
+}
+
+.img5 {
+	background-image: url(../img/bar-balada.jpg);
+}
+.img6 {
+	background-image: url(../img/ufncskjd3.jpg);
+}
+.img7 {
+	background-image: url(../img/shopping.jpg);
+}
+.img8 {
+	background-image: url(../img/m_coronel.jpg);
+}
+.img9 {
+	background-image: url(../img/HATILLO.jpg);
+}
+.img-all {
+
+	height: 200px;
+	color: #fff;
+	background-size: contain;
+	opacity: 0.7;
+}
+
+.img-all:hover {
+	 margin: 0;
+	 height: 110%;
+	 box-shadow: 0 14px 24px rgba(50,48,58,.25);
+	opacity: 1;
+	width: 110%
+}
+
+.img-all a {
+
+	margin: 0;
+	font-size: 1.2em;
+	position: relative;
+	top: 40%;
+	text-shadow: 07 1px 0 rgba(22,14,38,.85);
+	font-weight: 600;
+	color: #fff;
+}
+
+.img-all p {
+	display: none;
+	text-shadow: 0 1px 0 rgba(22,14,38,.85);
+}
+
+.img-all:hover p {
+	display: block;
+	position: relative;
+	top: 40%;
+
+}
+
+
+
+#mapa {
+	background-image: linear-gradient(141deg,#ff867e 0,#ffaa6c 27%,#ffa876 52%,#fe906a 73%,#ff837d 100%);
+	padding-bottom: 70px;
+	position: relative;
+	color: #fff;
+
+}
+
+#detalle {
+	background-image: linear-gradient(137deg,#d0baff 0,#ad8bf6 27%,#aa88fe 52%,#b77bf6 73%,#d7aaeb 100%);
+	padding-bottom: 70px;
+	position: relative;
+	color: #fff;
+
+}
+
+
+.sticky {
+	position: sticky;
+	left: 50px;
+	top: 150px;
+	z-index: 2;
+}
+
+.tabs {
+	position: relative;
+	display: inline-block;
+	line-height: 72px;
+	margin-top: -25px;
+	height: 72px;
+	left: 30px;
+	border-radius: 48px;
+	background: #7b53c1;
+	-webkit-box-shadow: 0 14px 24px 0 rgba(50,49,58,.25);
+	box-shadow: 0 14px 24px 0 rgba(50,49,58,.25);	
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+
+
+.nav-pills .pillmapa .nav-link {
+    background: #7b53c1;
+	height: 72px;
+	border-radius: 48px;
+}
+
+.nav-pills .pilldetalle .nav-link {
+     background: #7b53c1;
+	height: 72px;
+	border-radius: 48px;
+}
+
+
+
+#mapa h2 {
+	font-size: 2em;
+	
+}
+#mapa ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+#map {
+	border-radius: 10px;
+	border: 1px dashed #ddd;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
+	display: inline-block;
+}
+.tipo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.tipo:hover {
+	box-shadow: 0 14px 24px rgba(50,48,58,.25);
+}
+
+
+#map {
+	border-radius: 6px;
+	height: 500px;
+	width: 800px;
+}
+
+#mapa ul {
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.row {
+	
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.element {
+	height: 500px;
+	border-radius: 6px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #eef;
+	max-width: 450px;
+	color:#000;
+
+}
+.element:hover  {
+	height: 500px;	
+	border-radius: 6px;	
+	box-shadow: 0 14px 24px rgba(50,48,58,.25);
+}
+
+footer {
+	background: #32313a;
+	width: 100%;
+	padding: 47px 0;
+	z-index: 9;
+	position: relative;
+	color: #fff;
+}

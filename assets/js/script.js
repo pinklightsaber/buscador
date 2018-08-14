@@ -1,23 +1,22 @@
-// jQuery(document).ready( function($) {
+$(function() {
 
-//   navigator.geolocation.getCurrentPosition(function(pos) {
+	 
+    $(window).scroll(function () {
+        var scroll_pos = $(this).scrollTop();
+        if (scroll_pos > 200) {
+            $(".navbar").css('background', '#eee'); //*Transparente
+        } else {
+            $(".navbar").css('background', 'transparent'); //*blanco
+        }          
+    });
 
-//     lat = pos.coords.latitude;
-//     lon = pos.coords.longitude;
-//     var current = new google.maps.LatLng(lat, lon);
+    // $('li a').on({
+    // 	mouseenter: function(){
+    // 		$(this).removeClass('gray');
+    // 	},
+    // 	mouseleave: function(){
+    // 		$(this).addClass('gray');
+    // 	}});
 
-//     var api = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=';
-//     var key = 'AIzaSyD5Tsudko0x4s4krnsetBUwFF6oyzWg_7w';
-//     var cors = 'https://cors-anywhere.herokuapp.com/';
-
-//     link = cors + api + lat + ',' + lon + '&radius=' + 5000 + '&type=cafe&key='+ key;
-
-//     $.ajax({
-//       url: link,
-//       method: 'GET'
-//     }).done(function(data){
-//       console.log(data)
-//     });
-//   });
-
-// });
+	
+});

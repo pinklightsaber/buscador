@@ -12,14 +12,23 @@ if(navigator.geolocation) {
       lon = pos.coords.longitude;
       current = new google.maps.LatLng(lat, lon);
       initMap(current);
-       });
-};
+       },
+
+    function(){
+
+  $("#al").show();
+  $('#cont').append('Si no has permitido la localización, recarga la página para ello');
+});
+}; 
+
+
+
 
 function initMap () {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: current,
-    zoom: 15
+    zoom: 15 
   });
   
 
@@ -30,7 +39,11 @@ function initMap () {
       type: [type]
     }, callback);
 };
-
+$('.img-all').on('click', function(){
+  type = this.id;
+  initMap();
+  callback();
+});
 
 $( "#radio" ).change(function() {
     var e = document.getElementById("radio");
@@ -137,6 +150,7 @@ function createMarker(place) {
   var placeLoc = place.geometry.location;
   var marker = new google.maps.Marker({
     map: map,
+
     position: place.geometry.location
 
   });
@@ -147,8 +161,15 @@ function createMarker(place) {
     request = {
       placeId : id
     };
-      
+
+    // $('#detalle').addClass('active');
+    // $('#detalle').removeClass('fade');
+    $('.pilldetalle > a').tab('show');
+      $('html,body').animate({
+    scrollTop: $("#detalle").offset().top
+      }, 2000);
       crearDatos();   
+
   });
 
 };

@@ -8,7 +8,7 @@ body {
 .container {
 	max-width: 960px;
 	box-sizing: border-box;
-	padding: 0;
+	padding: 15px;
 	text-align: center;
 
 }
@@ -38,130 +38,36 @@ body {
 	margin: 100px 0;
 }
 
-
 #img1 {
 	background-image: url(../img/565256_442792.jpg);
 }
 #img2 {
-	background-image: url(../img/ufncskjd3.jpg);
+	background-image: url(../img/parque-Alameda-2.jpg);
 }
 #img3 {
 	background-image: url(../img/owurghvdsou.jpg);
 }
 
-.img-all {
-
-	height: 200px;
-	margin: 10px;
-	color: #fff;
-	border-radius: 6px;
-	background-size: contain;
-
+#img4 {
+	background-image: url(../img/Cafee.png);
 }
 
-.img-all:hover {
-	 margin: 0;
-	 height: 220px;
-	 box-shadow: 0 14px 24px rgba(50,48,58,.25);
-
+#img5 {
+	background-image: url(../img/bar-balada.jpg);
 }
-
-.img-all a {
-
-	margin: 0;
-	font-size: 1.2em;
-	position: relative;
-	top: 40%;
-	text-shadow: 0 1px 0 rgba(22,14,38,.85);
-	font-weight: 600;
-	color: #fff;
+#img6 {
+	background-image: url(../img/ufncskjd3.jpg);
 }
-
-.img-all p {
-	display: none;
-	text-shadow: 0 1px 0 rgba(22,14,38,.85);
+#img7 {
+	background-image: url(../img/images.jpg);
 }
-
-.img-all:hover p {
-	display: block;
-	position: relative;
-	top: 40%;
-
+#img8 {
+	background-image: url(../img/m_coronel.jpg);
+}
+#img9 {
+	background-image: url(../img/HATILLO.jpg);
 }
 /*otras pages*/
-#header { 
-	max-width: 100%;
-	height: 300px;
-	margin:auto;
-	background-size: cover;
-	color: #fff;
-	font-weight: bold;
-	background-color:#d3b28f;
-	background-image: radial-gradient(#fff 10%, transparent 10%),
-	radial-gradient(#fff 10%, transparent 10%);
-	background-size: 30px 30px;
-	background-position: 0 0, 15px 15px;padding: 10px;
-	opacity: 0.35;
-	width: 100%;
-	min-height: 50px;
-	-webkit-clip-path: ellipse(60% 100% at 50% 0%);
-	clip-path: ellipse(60% 100% at 50% 0%);
-
-}
-
-#header h1 {
-	font-size: 4em;
-	padding: 100px 0 50px 0;
-}
-
-
-#mapa {
-	padding: 70px 0;
-}
-
-#mapa h2 {
-	font-size: 2em;
-	
-}
-#mapa ul {
-	list-style-type: none;
-	display: flex;
-	justify-content: space-between;
-}
-
-#map {
-	border-radius: 10px;
-	border: 1px dashed #ddd;
-	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
-	display: inline-block;
-}
-.tipo {
-	display: inline-block;
-	vertical-align: middle;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	position: absolute;
-	left: 100px;
-	top: 100px;
-
-}
-
-.tipo:hover {
-	box-shadow: 0 14px 24px rgba(50,48,58,.25);
-}
-
-
-#map {
-	border-radius: 6px;
-	height: 500px;
-	width: 800px;
-}
-
-#mapa ul {
-	font-size: 2em;
-	font-weight: 600;
-}
 
 li {
 	font-size: 1em;
@@ -184,19 +90,90 @@ li {
 	margin: 0;
 	box-sizing: border-box;
 }
-.element {
-	height: 500px;
-	border-radius: 6px;
-	margin: 10px;
-	padding: 0;
-	background-color: #eee;
-	max-width: 450px;
 
+.imgs{
+	height: 380px;
+	position: relative;
+	margin-bottom: 70px;
+	border-radius: 8px;
+
+	
 }
-.element:hover , {
-	height: 500px;	
-	border-radius: 6px;	
+.custom-1 {
+	height: 50%;
+	width: 280px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-box-shadow: 0 14px 24px rgba(50,48,58,.25);
 	box-shadow: 0 14px 24px rgba(50,48,58,.25);
+	margin-top: -105px;
+	border-radius: 6px;
+	background-size: contain;
 }
 
+.custom-2 {
+	height: 50%;
+	width: 280px;
+	right: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-box-shadow: 0 14px 24px rgba(50,48,58,.25);
+	box-shadow: 0 14px 24px rgba(50,48,58,.25);
+	margin-top: -105px;
+	border-radius: 6px;
+	background-size: contain;
+}
 
+.custom-3 {
+	height: 100%;
+	width: 380px;
+	position: relative;
+	z-index: 2;
+	-webkit-box-shadow: 0 14px 24px rgba(50,48,58,.25);
+	box-shadow: 0 14px 24px rgba(50,48,58,.25);
+	display: inline-block;
+	text-align: center;
+	border-radius: 6px;
+	background-size: contain;
+}
+
+.service {
+	background-image: linear-gradient(141deg,#ff867e 0,#ffaa6c 27%,#ffa876 52%,#fe906a 73%,#ff837d 100%);
+	padding-bottom: 70px;
+	position: relative;
+	color: #fff;
+}
+.serv {
+	padding: 70px 0;
+}
+
+.step-1 {
+	
+	box-shadow: 0 14px 24px 0 rgba(50,48,58,.25);
+	border-radius: 6px;
+	width: 340px;
+	height: 310px;
+	background-size: contain;
+}
+
+.step-2 {
+	
+	box-shadow: 0 14px 24px 0 rgba(50,48,58,.25);
+	border-radius: 6px;
+	width: 180px;
+	height: 180px;
+	background-size: contain;
+	position: absolute;
+	transform: translate(200px,-150px);
+	opacity: 1;
+}
+
+footer {
+	background: #32313a;
+	width: 100%;
+	padding: 47px 0;
+	z-index: 9;
+	position: relative;
+	color: #fff;
+}
