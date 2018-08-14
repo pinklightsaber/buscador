@@ -140,7 +140,7 @@ body {
 
 
 #mapa {
-	background-image: linear-gradient(141deg,#ff867e 0,#ffaa6c 27%,#ffa876 52%,#fe906a 73%,#ff837d 100%);
+	background-image: linear-gradient(141deg,#DF9C9D 0,#DF9C9f 27%,#EEC9C8 52%,#EEC9C8 73%,#F6DDDF 100%);
 	padding-bottom: 70px;
 	position: relative;
 	color: #fff;
@@ -148,12 +148,13 @@ body {
 }
 
 #detalle {
-	background-image: linear-gradient(137deg,#d0baff 0,#ad8bf6 27%,#aa88fe 52%,#b77bf6 73%,#d7aaeb 100%);
+	background-image: linear-gradient(137deg,#687A80 0,#DF9C9D 27%,#DF9C9D 52%,#EEC9C8 73%,#B9C6CA 100%);
 	padding-bottom: 70px;
 	position: relative;
 	color: #fff;
 
 }
+
 
 
 .sticky {
